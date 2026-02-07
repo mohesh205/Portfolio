@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        box-sizing: border-box;
+
+      }
+      body{
+        overflow-x: hidden;
+      }
+      html{
+        scroll-behavior: smooth;
+      }
+      header{
+        background-color: rgb(2, 2, 36);
+        color: white;
+        padding: 15px 30px;
+        position: sticky;
+        top: 0;
+      }
+      footer{
+        background-color: rgb(2, 2, 36);
+        color: white;
+        padding: 12px;
+        text-align: center;
+      }
+      .nav1{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .nav{
+        display: flex;
+        gap: 20px;
+        list-style: none;
+      }
+
+      .nav a{
+        color: white;
+        text-decoration: none;
+      }
+      .front{
+        background-color: rgb(55, 89, 238);
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        gap: 10px;
+      }
+      span{
+        color: yellow;
+      }
+      .abouts{
+        padding: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .about1{
+        background-color: rgb(55, 89, 238);
+        width: 45vw;
+        height: 40vh;
+        border-radius: 20px;
+      }
+      .about{
+        text-align: center;
+        margin: 20px;
+      }
+      .about p{
+        margin-top: 30px; 
+        line-height: 1.6;
+        max-width: 700px;
+      }
+      .projects{
+        padding: 20px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        display: block;
+      }
+      .project1{
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 70vw;
+        margin: 0 auto;
+        padding: 30px;
+      }
+      .project{
+        background-color: rgb(55, 89, 238);
+        color: white;
+        margin: 10px;
+        width: 30vw;
+        height: 15vh;
+        text-align: center;
+        border-radius: 12px;
+        padding-top: 10px;
+      }
+      .skills{
+        padding: 20px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        display: block;
+      }
+      .skill1{
+        width: 50vw;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+      }
+      .skill{
+        width: 8vw;
+        height: 5vh;
+        background-color: rgb(55, 89, 238);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;        
+        margin: 10px;
+        border-radius: 30px;
+      }
+      .contacts h2{
+        text-align: center;
+      }
+      .contact{
+        margin-left: 20vw;
+        padding: 20px;
+        
+      }
+      .btn{
+        width: 9vw;
+        height: 7vh;
+        background-color: black;
+        color: aliceblue;
+        border: none;
+        border-radius: 4px;
+      }
+      .btn:hover{
+        background: rgba(240, 218, 19, 0.7);
+
+      }
+
+      .social-icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+      }
+      .social-icons a{
+        font-size: 26px;
+        color: #8b1e00;
+        text-decoration: none;
+        transition: transform 0.3s ease, color 0.3s ease;
+      }
+      .social-icons a:hover{
+        transform: scale(1.5);
+        color: #000;
+      }
+      @media (max-width: 600px) {
+        body{
+          overflow-x: hidden;
+        }
+  header h1{
+    font-size: 18px;
+  }
+
+  .nav{
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  /* HERO SECTION */
+  .front h1{
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .front p{
+    font-size: 16px;
+  }
+
+  .btn{
+    width: 40vw;
+    height: 6vh;
+  }
+
+  /* ABOUT */
+  .about1{
+    width: 90vw;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .about p{
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* PROJECTS */
+  .project1{
+    width: 90vw;
+    justify-content: center;
+  }
+
+  .project{
+    width: 100%;
+    max-width: 90vw;
+    height: auto;
+    padding: 15px;
+  }
+
+  /* SKILLS */
+  .skill1{
+    width: 90vw;
+  }
+
+  .skill{
+    width: 35vw;
+    height: 5vh;
+    font-size: 14px;
+  }
+
+  /* CONTACT */
+  .contact{
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="nav1">
+      <div><h1>Portfolio</h1></div>
+      <ul class="nav">
+        <li><a href="#abouts">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contacts">Contact</a></li>
+      </ul>
+      </div>
+    </header>
+
+    <div class="front">
+      <h1>Hello,  I'm <span>Moheshwaran S</span></h1>
+      <p>Web Developer</p>
+      <button onclick="goTo('contacts')" class="btn">Explore</button>
+    </div>
+
+      <div class="abouts" id="abouts">
+        <div class="about1">
+          <div class="about">
+            <h2>About</h2>
+            <p>Hi! I’m a beginner Front-End Web Developer who enjoys creating clean, 
+              responsive, and user-friendly websites. I work with HTML, CSS, JavaScript,
+               and React, and I’m currently learning backend technologies 
+              like Node.js and Express to expand my full-stack development skills.</p>
+        </div>
+        <div class="social-icons">
+          <a href="" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/moheshwaran-s-9269b9277?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" title="Linkedin">
+            <i class="fab fa-linkedin"></i>
+          </a>
+
+          <a href="https://www.instagram.com/__moheshwaran__?utm_source=qr&igsh=bTMxYXpvZDQ4aWQ2" target="_blank" title="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+
+          <a href="mailto:moheshwaran205@gmail.com" target="_blank" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+        </div>
+      </div>
+
+      <div class="projects" id="projects">
+        <h2>Projects</h2>
+        <div class="project1">
+          <div class="project">
+            <h3>Portfolio Website</h3>
+            <p></p>
+          </div>
+          <div class="project">
+            <h3>CGPA Calculator</h3>
+            <p></p>
+          </div>
+          <div class="project">
+            <h3>Web App</h3>
+            <p></p>
+          </div>
+          <div class="project">
+            <h3>Landing Page</h3>
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills" id="skills">
+        <h2>Skills</h2>
+        <div class="skill1">
+          <div class="skill">
+            <p>HTML</p>
+          </div>
+          <div class="skill">
+            <p>CSS</p>
+          </div>
+          <div class="skill">
+            <p>JavaScript</p>
+          </div>
+          <div class="skill">
+            <p>React</p>
+          </div>
+          <div class="skill">
+            <p>Node js</p>
+          </div>
+          <div class="skill">
+            <p>Python</p>
+          </div>
+          <div class="skill">
+            <p>Java</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contacts" id="contacts">
+        <h2>Contact</h2>
+        <div class="contact">
+          <p>Email: moheshwaran205@gmail.com</p>
+          <p>Phone: 9042815492</p>
+        </div>
+      </div>
+    <footer>
+      <h3>© 2026 Moheshwaran</h3>
+    </footer>
+
+    <script>
+      function goTo(id) {
+      document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    }
+</script>
+  </body>
+</html>
